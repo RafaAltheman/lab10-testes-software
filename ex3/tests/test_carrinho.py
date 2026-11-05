@@ -21,3 +21,10 @@ def test_vinte_no_minimo():
     c.adicionar(30000)
     c.aplicar_cupom("VINTE")
     assert c.total == 24000
+
+
+def test_vinte_abaixo_minimo():
+    c = Carrinho()
+    c.adicionar(29999)
+    c.aplicar_cupom("VINTE")
+    assert c.total == 29999
