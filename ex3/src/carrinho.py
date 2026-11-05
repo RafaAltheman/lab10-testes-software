@@ -14,7 +14,9 @@ class Carrinho:
             raise ValueError("preco deve ser positivo")
 
         if type(quantidade) is not int or quantidade < 1:
-            raise ValueError("quantidade invalida")
+            raise ValueError(
+                "quantidade deve ser inteira e positiva"
+            )
 
         self._subtotal += preco * quantidade
 

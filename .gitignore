@@ -3,3 +3,19 @@ mutants/
 ex1_backup/
 ex2_backup/
 ex3_backup/
+
+# Arquivos temporarios do Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Arquivos do mutmut
+mutants/
+
+# Backups
+ex1_backup/
+ex2_backup/
+ex3_backup/
