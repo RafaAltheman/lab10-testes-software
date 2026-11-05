@@ -111,7 +111,27 @@ Nesse teste, a fila chama `P1, P2, P3, P4`, porque não tem nenhuma senha normal
 
 ### e) Resultado do mutmut
 
+### e) Resultado do mutmut
 
+Rodei o mutmut para verificar se os testes conseguem identificar alterações no código da fila.
+
+Resultados:
+- 11 testes passaram
+- 41 mutantes gerados
+- 35 mutantes eliminados
+- 6 mutantes sobreviveram
+- Escore de mutação: 85,37%
+
+Os mutantes que sobreviveram foram:
+
+- `fila.xǁFilaǁemitir__mutmut_17`
+- `fila.xǁFilaǁemitir__mutmut_18`
+- `fila.xǁFilaǁemitir__mutmut_19`
+- `fila.xǁFilaǁchamar__mutmut_2`
+- `fila.xǁFilaǁchamar__mutmut_3`
+- `fila.xǁFilaǁchamar__mutmut_4`
+
+Mesmo com os 11 testes passando, 6 mutantes sobreviveram. Isso mostra que alguns comportamentos ainda podem precisar de testes mais específicos. Para saber exatamente quais, seria necessário analisar as alterações feitas por esses mutantes.
 
 ---
 
