@@ -31,3 +31,10 @@ def test_senhas_prioritarias():
     assert fila.emitir("prioritaria") == "P2"
     assert fila.chamar() == "P1"
     assert fila.chamar() == "P2"
+
+
+def test_tipo_invalido():
+    fila = Fila()
+
+    with pytest.raises(ValueError):
+        fila.emitir("urgente")
