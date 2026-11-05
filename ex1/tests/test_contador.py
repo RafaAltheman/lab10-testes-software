@@ -15,3 +15,7 @@ def test_uma_palavra():
 
 def test_duas_palavras():
     assert contar_palavras("bom dia") == {"bom": 1, "dia": 1}
+
+
+def test_palavra_repetida():
+    assert contar_palavras("dia a dia") == {"dia": 2, "a": 1}
