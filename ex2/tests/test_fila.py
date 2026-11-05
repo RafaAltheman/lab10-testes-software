@@ -22,3 +22,12 @@ def test_senhas_normais():
     assert fila.aguardando == 2
     assert fila.chamar() == "N1"
     assert fila.chamar() == "N2"
+
+
+def test_senhas_prioritarias():
+    fila = Fila()
+
+    assert fila.emitir("prioritaria") == "P1"
+    assert fila.emitir("prioritaria") == "P2"
+    assert fila.chamar() == "P1"
+    assert fila.chamar() == "P2"
