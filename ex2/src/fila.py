@@ -1,2 +1,3 @@
 class Fila:
-    pass
+    def __init__(self):
+        self.aguardando = 0
