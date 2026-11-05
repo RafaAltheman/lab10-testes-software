@@ -49,3 +49,13 @@ def test_quantidade_negativa():
     c = Carrinho()
     with pytest.raises(ValueError):
         c.adicionar(1000, -1)
+
+
+@pytest.mark.parametrize(
+    "quantidade",
+    [1.5, "2", None, True]
+)
+def test_quantidade_nao_inteira(quantidade):
+    c = Carrinho()
+    with pytest.raises(ValueError):
+        c.adicionar(1000, quantidade)
