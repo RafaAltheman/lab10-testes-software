@@ -23,3 +23,19 @@ def test_palavra_repetida():
 
 def test_maiusculas_minusculas():
     assert contar_palavras("Dia dia DIA") == {"dia": 3}
+
+
+def test_espacos_multiplos():
+    assert contar_palavras("bom   dia") == {"bom": 1, "dia": 1}
+
+
+def test_quebra_linha():
+    assert contar_palavras("bom\ndia") == {"bom": 1, "dia": 1}
+
+
+def test_hifen():
+    assert contar_palavras("guarda-chuva") == {"guarda-chuva": 1}
+
+
+def test_ponto_exclamacao():
+    assert contar_palavras("fim. Fim!") == {"fim": 2}
