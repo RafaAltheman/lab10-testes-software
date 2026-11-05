@@ -7,3 +7,7 @@ def test_texto_vazio():
 
 def test_uma_palavra():
     assert contar_palavras("teste") == {"teste": 1}
+
+
+def test_uma_palavra():
+    assert contar_palavras("teste") == {"teste": 1}
