@@ -17,10 +17,12 @@ class Fila:
             self._seq_prioritaria += 1
             senha = f"P{self._seq_prioritaria}"
             self._prioritarias.append(senha)
-        else:
+        elif tipo == "normal":
             self._seq_normal += 1
             senha = f"N{self._seq_normal}"
             self._normais.append(senha)
+        else:
+            raise ValueError("tipo invalido")
 
         return senha
 
