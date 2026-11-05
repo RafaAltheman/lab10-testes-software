@@ -21,4 +21,7 @@ class Carrinho:
         if self._subtotal < 10000:
             return self._subtotal
 
+        if self._desconto == 20 and self._subtotal < 30000:
+            return self._subtotal
+
         return self._subtotal * (100 - self._desconto) // 100
