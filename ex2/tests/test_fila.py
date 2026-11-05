@@ -12,3 +12,13 @@ def test_chamar_fila_vazia():
 
     with pytest.raises(IndexError):
         fila.chamar()
+
+
+def test_senhas_normais():
+    fila = Fila()
+
+    assert fila.emitir("normal") == "N1"
+    assert fila.emitir("normal") == "N2"
+    assert fila.aguardando == 2
+    assert fila.chamar() == "N1"
+    assert fila.chamar() == "N2"
