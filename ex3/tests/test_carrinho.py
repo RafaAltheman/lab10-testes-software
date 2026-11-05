@@ -1,3 +1,4 @@
+import pytest
 from carrinho import Carrinho
 
 
@@ -36,3 +37,15 @@ def test_substituicao_cupom():
     c.aplicar_cupom("DEZ")
     c.aplicar_cupom("VINTE")
     assert c.total == 24000
+
+
+def test_quantidade_zero():
+    c = Carrinho()
+    with pytest.raises(ValueError):
+        c.adicionar(1000, 0)
+
+
+def test_quantidade_negativa():
+    c = Carrinho()
+    with pytest.raises(ValueError):
+        c.adicionar(1000, -1)
